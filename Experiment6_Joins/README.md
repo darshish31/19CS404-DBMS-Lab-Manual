@@ -308,8 +308,6 @@ WHERE
 
 ![image](https://github.com/user-attachments/assets/c94c4489-693f-4371-b8ae-4955a6f51a1e)
 
-**Result:**
-The given Joins code has been executed successfully.
 
 ## RESULT
 Thus, the SQL queries to implement different types of joins have been executed successfully.
