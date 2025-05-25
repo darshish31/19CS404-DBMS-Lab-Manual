@@ -45,28 +45,84 @@ Design a database for patient management, appointments, medical records, and bil
    - Why you chose the entities and relationships.
    - How you modeled prerequisites or billing.
 
-# ER Diagram Submission - Student Name
+# ER Diagram Submission - Darshini B
 
 ## Scenario Chosen:
-University / Hospital (choose one)
+University 
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
 
-## Entities and Attributes:
-- Entity1: Attributes
-- Entity2: Attributes
-...
+![image](https://github.com/user-attachments/assets/8e46fb9c-dbf1-4a35-886b-67dcd40b118c)
+ 
+# University ER Diagram Breakdown
 
-## Relationships and Constraints:
-- Relationship1 (Cardinality, Participation)
-- Relationship2 (Cardinality, Participation)
-...
+## Entities and Attributes
 
-## Extension (Prerequisite / Billing):
-- Explain how you modeled prerequisites or billing.
+- **DEPARTMENT**
+  - `DEPARTMENT_ID`
+  - `DEPARTMENT_NAME`
+  - `DEPARTMENT_HEAD`
 
-## Design Choices:
-Brief explanation of why you chose certain entities, relationships, and assumptions
+- **ENROLLMENT**
+  - `ENROLLMENT_ID`
+  - `COURSE_ID`
+  - `ENROLLMENT_DATE`
+
+- **STUDENT_DETAILS**
+  - `STUDENT_NAME`
+  - `REGISTER_NO`
+  - `EMAIL_ID`
+  - `PHONE_NUMBER`
+  - `PROGRAM_ID`
+  - `DOB`
+
+- **PRE_REQUISITE**
+  - `COURSE_ID`
+  - `PRE_REQUISITE_COURSE_ID`
+
+---
+
+## Relationships and Constraints
+
+- **UNIVERSITY–DEPARTMENT**
+  - **Cardinality**: One-to-Many (1:N)
+  - **Participation**: Total on `DEPARTMENT` side
+
+- **UNIVERSITY–ENROLLMENT**
+  - **Cardinality**: One-to-Many (1:N)
+  - **Participation**: Total on `ENROLLMENT` side
+
+- **UNIVERSITY–STUDENT_DETAILS**
+  - **Cardinality**: One-to-Many (1:N)
+  - **Participation**: Total on `STUDENT_DETAILS` side
+
+- **UNIVERSITY–PRE_REQUISITE**
+  - **Cardinality**: One-to-Many (1:N)
+  - **Participation**: Total on `PRE_REQUISITE` side
+
+---
+
+## Extension: Prerequisite Modeling
+
+The **PRE_REQUISITE** entity captures prerequisite relationships between courses:
+- `COURSE_ID`: Course that requires a prerequisite
+- `PRE_REQUISITE_COURSE_ID`: The course that must be completed first
+
+This design supports many-to-many prerequisite relationships using self-referencing.
+
+> **Note**: Billing is not represented in the current ER diagram.
+
+---
+
+## Design Choices
+
+- **Entity Separation**: Distinct entities for department, enrollment, student, and prerequisite for clarity and normalization.
+- **Data Normalization**: Related attributes are grouped to reduce redundancy.
+- **Prerequisite Logic**: Modeled as a separate entity for flexibility and scalability.
+- **Assumptions**:
+  - Students can enroll in multiple courses.
+  - Courses can have multiple students and prerequisites.
+  - Every department belongs to a university.
 
 ## RESULT
+A normalized, scalable ER model capturing the academic structure of a university, ready for relational database implementation.
