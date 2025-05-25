@@ -105,123 +105,176 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/a96ca725-91db-4ea8-bcdf-dcc5eef9d6e4)
 
 ```sql
--- Paste your SQL code below for Question 1
+CREATE TABLE contacts(
+contact_id INTEGER primary key,
+first_name TEXT not NULL,
+last_name TEXT not NULL,
+email TEXT,
+phone TEXT not NULL CHECK(LENGTH(phone)>=10)
+);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/fe1083f2-ee2c-4a61-bbb9-17021b66ce35)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/1c21219d-9085-4160-a3ab-c8014620e267)
 
 ```sql
--- Paste your SQL code below for Question 2
+ALTER TABLE customer
+ADD COLUMN email VARCHAR(100);
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/f6be8068-773c-434a-8870-89f491912717)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/c302ada3-d5d2-4aec-a2cd-5c8394273291)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE item(
+item_id TEXT primary key,
+item_desc TEXT,
+rate INTEGER,
+icom_id TEXT CHECK(LENGTH(icom_id)>=4),
+FOREIGN KEY(icom_id) REFERENCES company(com_id) ON DELETE SET NULL ON UPDATE SET NULL
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/6106ba83-ee42-43f0-9d93-d514243c25b9)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/614f1452-0985-4672-b0fa-648618c046c0)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+INSERT INTO student_details
+SELECT * FROM archived_students;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/d66370d3-9670-4616-985b-559b310d1430)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/866cb6e7-3e5b-4c84-98ea-567b19b27a82)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+INSERT INTO Products(ProductID,Name,Category)
+VALUES(106,'Fitness Tracker','Wearables'); 
+INSERT INTO Products(ProductID,Name,Category,Price,Stock)
+VALUES(107,'Laptop','Electronic',999.99,50);  
+INSERT INTO Products(ProductID,Name,Category,Stock)
+VALUES(108,'Wireless Earbud','Accessorie',100);  
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/c6dc79d4-d5fd-40cf-89aa-8f7b07be4b7b)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/b91fd14e-99ad-40a5-a589-aeac80489fbd)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+INSERT INTO Products(ProductID,Name,Category)
+VALUES(104,'Tablet','Electronics');
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/9d4a20a7-cc7b-403b-9127-7dc1ad841b07)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/1801a0f0-45e9-455d-a190-345887e81a26)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+ALTER TABLE Student_details
+ADD Mobilenumber number;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/6f41edbb-7d0c-4510-9164-329c3975a613)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/eef2857b-5b37-4f85-88d1-42b37a2240dc)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+CREATE TABLE Shipments(
+ShipmentID INTEGER primary key,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+FOREIGN KEY(SupplierID) REFERENCES Suppliers(SupplierID),
+FOREIGN KEY(OrderID) REFERENCES Orders(OrderID) 
+);
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/72725fdd-146e-4019-978d-cd0df2f85d12)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/c42ebe08-e791-4916-a457-5e5175da5db5)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE jobs(
+job_id INTEGER,
+job_title TEXT DEFAULT '',
+min_salary INTEGER DEFAULT 8000,
+max_salary INTEGER DEFAULT NULL
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/3b2a4157-4f6d-40c0-8579-b1d8f9e2c03f)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/cfc37671-01b5-43e1-b32f-f91fb5b3a89a)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+CREATE TABLE Employees(
+EmployeeID INTEGER,
+FirstName TEXT,
+LastName TEXT,
+HireDate DATE 
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/6f9960b2-fe33-4149-b775-dbac9f718ef4)
+
 
 
 ## RESULT
