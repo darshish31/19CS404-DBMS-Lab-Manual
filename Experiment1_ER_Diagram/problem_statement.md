@@ -52,7 +52,8 @@ University
 
 ## ER Diagram:
 
-![image](https://github.com/user-attachments/assets/8e46fb9c-dbf1-4a35-886b-67dcd40b118c)
+![WhatsApp Image 2025-05-25 at 18 24 08_84038b5c](https://github.com/user-attachments/assets/698b5883-d03f-4e8f-bf9f-9a7ff45abf4a)
+
  
 # University ER Diagram Breakdown
 
