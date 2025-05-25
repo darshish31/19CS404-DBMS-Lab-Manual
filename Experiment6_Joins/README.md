@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/51356c15-c51e-43f9-a87e-14acf03caafd)# Experiment 6: Joins
+# Experiment 6: Joins
 
 ## AIM
 To study and implement different types of joins.
